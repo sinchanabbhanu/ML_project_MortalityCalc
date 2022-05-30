@@ -22,6 +22,10 @@ CORS(app)
 def home():
     return render_template('index.html')
 
+@app.route('/ageRisk')
+def ageRisk():
+    return render_template("2age.html")
+
 @app.route('/ourModel')
 def ourModel():
     return render_template("3model.html")
@@ -30,6 +34,13 @@ def ourModel():
 def riskCalculator():
     return render_template("4risk_cal.html")
 
+@app.route('/correlation')
+def correlation():
+    return render_template("5corr.html")
+
+@app.route('/aboutUs')
+def aboutUs():
+    return render_template("6bio.html")
 
 def predictRisk(age, gender, hypertension, diabetes, cvd, copd, cancer, kidneydisease, fever, breath, cough, tachypnea, fatigue, diarrhea) -> []: 
 
